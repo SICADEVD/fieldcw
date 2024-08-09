@@ -1,9 +1,9 @@
 /* default margin css start */
 :root {
-    --main-color: #78a903;
-    --main-color-hover: #a4da2259;
+    --main-color: #0000FB;
+    --main-color-hover: #7D7DFF;
     --main-bg-dark: #013f17;
-    --main-btn-primary: #056526;
+    --main-btn-primary: #000080;
     --main-sidebar-bg: #f9f9f9;
     --main-outline-info: #ffc06b;
   }
