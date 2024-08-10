@@ -162,4 +162,11 @@ class CooperativeManagerController extends Controller
         $cooperativeManagers = User::manager()->where('cooperative_id', $id)->orderBy('id', 'DESC')->with('cooperative')->paginate(getPaginate());
         return view('admin.manager.index', compact('pageTitle', 'cooperativeManagers'));
     }
+
+    public function delete($id)
+    {
+        User::where('id', $id)->delete();
+        $notify[] = ['success', 'Le manager supprimé avec succès'];
+        return back()->withNotify($notify);
+    }
 }

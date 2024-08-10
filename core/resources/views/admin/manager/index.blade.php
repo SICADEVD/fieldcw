@@ -66,6 +66,11 @@
                                                         <i class="la la-eye-slash"></i> @lang('Désactivé')
                                                     </button>
                                                 @endif 
+                                                <button type="button" class=" confirmationBtn   dropdown-item"
+                                                        data-action="{{ route('admin.cooperative.manager.delete', $manager->id) }}"
+                                                        data-question="@lang('Êtes-vous sûr devouloir supprimer ce manager?')">
+                                                        <i class="las la-trash"></i> @lang('Supprimer')
+                                                    </button>
                                             </div>
                                         </td>
                                     </tr>
