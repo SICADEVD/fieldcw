@@ -103,17 +103,18 @@ Route::middleware('admin')->group(function () {
         Route::post('/uploadcontent', 'uploadContent')->name('uploadcontent');
     });
 
-    // Route::controller('CourierSettingController')->name('courier.')->prefix('courier')->group(function () {
+   //Cooperative Manager
+   Route::controller('FinancementController')->name('financement.')->prefix('financement')->group(function () {
+    Route::get('delegue', 'index')->name('index');
+    Route::get('delegue/create', 'create')->name('delegue.create');
+    Route::post('delegue/store', 'store')->name('delegue.store');
+    Route::get('delegue/edit/{id}', 'edit')->name('delegue.edit');
+    Route::post('delegue/status/{id}', 'status')->name('delegue.status');
+    Route::post('delegue/delete/{id}', 'delete')->name('delegue.delete');
 
-    //     Route::name('unit.')->prefix('manage')->group(function () {
-    //         Route::get('unit', 'unitIndex')->name('index');
-    //         Route::post('unit/store', 'unitStore')->name('store');
-    //         Route::post('status/{id}', 'status')->name('status');
-    //         Route::get('type/', 'typeIndex')->name('type.index');
-    //         Route::post('type/store', 'typeStore')->name('type.store');
-    //         Route::post('type/status/{id}', 'typeStatus')->name('type.status');
-    //     }); 
-    // });
+    Route::get('delegue/livraison', 'indexLivraison')->name('livraison.index');
+
+});
 
     Route::controller('SettingController')->name('config.')->prefix('setting')->group(function () {
  

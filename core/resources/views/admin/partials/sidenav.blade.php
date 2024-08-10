@@ -49,6 +49,31 @@
                         </ul>
                     </div>
                 </li>
+                <li class="sidebar-menu-item sidebar-dropdown">
+                    <a href="javascript:void(0)"
+                        class="{{ menuActive(['admin.financement*'], 3) }}">
+                        <i class="menu-icon las la-briefcase"></i>
+                        <span class="menu-title">@lang('Transactions') </span>
+                    </a>
+                    <div class="sidebar-submenu {{ menuActive(['admin.financement*'], 2) }} ">
+                        <ul>
+                            <li class="sidebar-menu-item {{ menuActive('admin.financement.index') }}">
+                                <a href="{{ route('admin.financement.index') }}" class="nav-link">
+                                    <i class="menu-icon las la-dot-circle"></i>
+                                    <span class="menu-title">@lang('Financement des délégués')</span>
+                                </a>
+                            </li>
+
+                            <li class="sidebar-menu-item {{ menuActive('admin.financement.livraison*') }}">
+                                <a href="{{ route('admin.financement.livraison.index') }}" class="nav-link">
+                                    <i class="menu-icon las la-dot-circle"></i>
+                                    <span class="menu-title">@lang('Suivi Financement/Livraison')</span>
+                                </a>
+                            </li> 
+
+                        </ul>
+                    </div>
+                </li>
                 <li class="sidebar-menu-item  {{ menuActive(['admin.config.campagne*']) }}">
                     <a href="{{ route('admin.config.campagne.index') }}" class="nav-link">
                         <i class="menu-icon las la-fax"></i>
