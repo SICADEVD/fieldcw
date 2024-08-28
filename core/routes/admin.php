@@ -54,6 +54,7 @@ Route::middleware('admin')->group(function () {
     Route::controller('CooperativeController')->name('cooperative.')->prefix('cooperative')->group(function () {
         Route::get('/', 'index')->name('index');
         Route::post('store', 'store')->name('store');
+        Route::post('delete/{id}', 'delete')->name('delete');
         Route::post('status/{id}', 'status')->name('status');
     });
 

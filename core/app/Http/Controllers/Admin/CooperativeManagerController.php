@@ -166,7 +166,7 @@ class CooperativeManagerController extends Controller
     public function delete($id)
     {
         User::where('id', $id)->delete();
-        $notify[] = ['success', 'Le manager supprimé avec succès'];
+        $notify[] = ['success', 'Le manager a été supprimé avec succès'];
         return back()->withNotify($notify);
     }
 }

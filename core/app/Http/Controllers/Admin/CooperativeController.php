@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\User;
 use App\Models\LeaveType;
 use App\Models\Cooperative;
 use Illuminate\Support\Str;
@@ -11,6 +12,7 @@ use App\Models\CustomFieldGroup;
 use App\Models\AttendanceSetting;
 use App\Http\Controllers\Controller;
 use App\Models\GoogleCalendarModule;
+use App\Models\Section;
 
 class CooperativeController extends Controller
 {
@@ -187,6 +189,14 @@ class CooperativeController extends Controller
 
         LeaveType::insert($status);
 
+    }
+
+    public function delete($id)
+    {
+        Cooperative::where('id', $id)->delete();
+        Section::where('cooperative_id', $id)->delete();
+        $notify[] = ['success', 'La coopérative a été supprimé avec succès'];
+        return back()->withNotify($notify);
     }
 
 }
