@@ -82,7 +82,7 @@
                                                     <i class="la la-eye-slash"></i>@lang('Désactivé')
                                                 </button>
                                             @endif
-                                            <button type="button" class=" confirmationBtn"
+                                            <button type="button" class="btn btn-sm btn-outline--warning confirmationBtn"
                                                         data-action="{{ route('admin.cooperative.delete', $cooperative->id) }}"
                                                         data-question="@lang('Êtes-vous sûr devouloir supprimer cette coopérative?')">
                                                         <i class="las la-trash"></i> @lang('Supprimer')
