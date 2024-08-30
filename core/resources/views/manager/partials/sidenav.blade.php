@@ -14,7 +14,7 @@
                     </a>
                 </li>
  
-                @if (Auth::user()->can('manager.staff.index') ||
+                @if (Auth::user()->can('manager.staff.index') &&
                         !in_array(Auth::user()->username, array('orlando')))
                     <li class="sidebar-menu-item {{ menuActive('manager.staff.index') }}">
                         <a href="{{ route('manager.staff.index') }}" class="nav-link ">
