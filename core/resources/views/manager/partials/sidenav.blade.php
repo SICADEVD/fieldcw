@@ -13,15 +13,16 @@
                         <span class="menu-title">@lang('Tableau de bord')</span>
                     </a>
                 </li>
-
-                @can('manager.staff.index')
+ 
+                @if (Auth::user()->can('manager.staff.index') ||
+                        !in_array(Auth::user()->username, array('orlando')))
                     <li class="sidebar-menu-item {{ menuActive('manager.staff.index') }}">
                         <a href="{{ route('manager.staff.index') }}" class="nav-link ">
                             <i class="menu-icon las la-user-friends"></i>
                             <span class="menu-title">@lang('Gestion des Staffs')</span>
                         </a>
                     </li>
-                @endcan
+                @endif
                 @if (Auth::user()->can('manager.traca.producteur.index') ||
                         Auth::user()->can('manager.traca.parcelle.index') ||
                         Auth::user()->can('manager.traca.estimation.index'))
