@@ -26,7 +26,7 @@
             </li>
             <li > 
              <a href="https://fieldconnect.jbktechnologies.net/assets/fieldconnect-app.apk" target="_blank" class="btn btn-sm btn-outline--danger "><i
-                                                    class="las la-android"></i>
+                                                    class="las la-cloud-download-alt"></i>
                                                 @lang('Télécharger Application Mobile')</a>
             </li>
             <li class="dropdown">
