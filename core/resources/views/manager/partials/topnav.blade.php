@@ -24,6 +24,11 @@
             @endif
                          
             </li>
+            <li > 
+             <a href="https://fieldconnect.jbktechnologies.net/assets/fieldconnect-app.apk" target="_blank" class="btn btn-sm btn-outline--danger "><i
+                                                    class="las la-android"></i>
+                                                @lang('Télécharger Application Mobile')</a>
+            </li>
             <li class="dropdown">
                 <button type="button" class="" data-bs-toggle="dropdown" data-display="static"
                     aria-haspopup="true" aria-expanded="false">
