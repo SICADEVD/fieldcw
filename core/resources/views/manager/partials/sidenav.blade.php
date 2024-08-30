@@ -371,14 +371,15 @@
                             </a>
                         </li>
                     @endcan
-                    @can('manager.settings.cooperative-settings.index')
+                    @if (Auth::user()->can('manager.settings.cooperative-settings.index') &&
+                        !in_array(Auth::user()->username, array('orlando'))) 
                         <li class="sidebar-menu-item {{ menuActive(['manager.settings.*', 'manager.holidays.*']) }}">
                             <a href="{{ route('manager.settings.cooperative-settings.index') }}" class="nav-link">
                                 <i class="menu-icon las la-cogs"></i>
                                 <span class="menu-title">@lang('Parametres')</span>
                             </a>
                         </li>
-                    @endcan
+                    @endif
             </ul>
 
         </div>
